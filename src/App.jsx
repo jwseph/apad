@@ -48,7 +48,7 @@ function App() {
     let resp = await fetch('https://io.kamiak.org/apad/');
     let obj = await resp.json();
     setSolution(obj.solution);
-    setDate('oct2sat')
+    setDate(obj.date.toLowerCase().replaceAll(' ', ''));
   }
 
   return (
